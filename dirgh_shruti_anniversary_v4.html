@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/Aditya%20Sharma/Downloads/dirgh_shruti_anniversary_v4.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./dirgh_shruti_anniversary_v4_files/css2" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f5f0e8; color: #2c2420; font-family: 'Jost', sans-serif; font-weight: 300; min-height: 100vh; overflow-x: hidden; }
+.petals-container { position: fixed; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+.petal { position: absolute; top: -30px; font-size: var(--sz, 14px); animation: fall var(--d, 8s) linear infinite var(--delay, 0s); opacity: 0; }
+@keyframes fall { 0% { transform: translateX(0) translateY(-30px) rotate(0deg); opacity: 0; } 8% { opacity: 0.5; } 50% { transform: translateX(var(--drift, 30px)) translateY(50vh) rotate(360deg); } 92% { opacity: 0.3; } 100% { transform: translateX(calc(var(--drift, 30px) * 2)) translateY(110vh) rotate(720deg); opacity: 0; } }
+.hearts-container { position: fixed; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+.fheart { position: absolute; bottom: -40px; font-size: var(--sz, 14px); animation: floatUp var(--d, 10s) ease-in infinite var(--delay, 0s); opacity: 0; color: #c4a882; }
+@keyframes floatUp { 0% { transform: translateY(0) scale(1); opacity: 0; } 15% { opacity: 0.4; } 80% { opacity: 0.2; } 100% { transform: translateY(-110vh) scale(0.5); opacity: 0; } }
+main { position: relative; z-index: 2; }
+.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; position: relative; }
+.hero-glow { position: absolute; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(180,150,110,0.13) 0%, transparent 65%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; animation: glowPulse 4s ease-in-out infinite; }
+@keyframes glowPulse { 0%,100% { opacity: 0.6; transform: translate(-50%,-50%) scale(1); } 50% { opacity: 1; transform: translate(-50%,-50%) scale(1.08); } }
+.anniversary-label { font-family: 'Jost', sans-serif; font-weight: 200; font-size: 11px; letter-spacing: 0.42em; text-transform: uppercase; color: #9c7d5a; margin-bottom: 2rem; animation: fadeUp 1.2s ease both; }
+.names { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(3.5rem, 10vw, 7rem); line-height: 1; color: #2c2420; animation: fadeUp 1.2s ease 0.25s both; }
+.names .amp { font-style: italic; color: #9c7d5a; font-size: 0.7em; vertical-align: middle; margin: 0 0.1em; animation: ampPulse 3s ease-in-out infinite 1.5s; }
+@keyframes ampPulse { 0%,100% { color: #9c7d5a; } 50% { color: #c4a070; } }
+.tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 2.5vw, 1.2rem); font-style: italic; color: #b8a08a; margin-top: 0.8rem; animation: fadeUp 1.2s ease 0.4s both; letter-spacing: 0.04em; }
+.date-line { font-family: 'Jost', sans-serif; font-weight: 200; font-size: 12px; letter-spacing: 0.32em; color: #a89278; margin-top: 1.2rem; animation: fadeUp 1.2s ease 0.5s both; }
+.heart-divider { margin: 2.5rem auto; display: flex; align-items: center; gap: 1rem; animation: fadeUp 1.2s ease 0.6s both; }
+.heart-divider::before, .heart-divider::after { content: ''; display: block; width: 80px; height: 0.5px; }
+.heart-divider::before { background: linear-gradient(to right, transparent, #b89a72); }
+.heart-divider::after { background: linear-gradient(to left, transparent, #b89a72); }
+.heart-icon { color: #b89a72; font-size: 20px; animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.25); } }
+.counter { font-family: 'Cormorant Garamond', serif; font-size: clamp(1rem, 2.8vw, 1.3rem); font-weight: 300; font-style: italic; color: #7a6248; animation: fadeUp 1.2s ease 0.8s both; line-height: 2; }
+.stats-row { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2.5rem; animation: fadeUp 1.2s ease 1s both; }
+.stat-pill { text-align: center; padding: 0.8rem 1.5rem; border: 0.5px solid rgba(156,125,90,0.25); background: rgba(255,248,238,0.6); }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: #9c7d5a; display: block; }
+.stat-lbl { font-family: 'Jost', sans-serif; font-weight: 200; font-size: 9px; letter-spacing: 0.35em; text-transform: uppercase; color: #b8a08a; display: block; margin-top: 2px; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+.scroll-hint { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; animation: fadeUp 1s ease 2s both; }
+.scroll-hint span { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #c2aa8c; }
+.scroll-line { width: 0.5px; height: 40px; background: linear-gradient(to bottom, #b89a72, transparent); animation: scrollPulse 1.5s ease-in-out infinite; }
+@keyframes scrollPulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+.section { max-width: 740px; margin: 0 auto; padding: 6rem 2rem; }
+.section-label { font-family: 'Jost', sans-serif; font-weight: 200; font-size: 10px; letter-spacing: 0.45em; text-transform: uppercase; color: #9c7d5a; margin-bottom: 3rem; text-align: center; }
+.quote-banner { background: rgba(255,248,238,0.8); border-left: 2px solid #b89a72; padding: 2.5rem 3rem; margin: 0 auto 6rem; max-width: 740px; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.quote-banner.visible { opacity: 1; transform: translateY(0); }
+.quote-banner p { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 3vw, 1.55rem); font-style: italic; font-weight: 300; color: #5a4030; line-height: 1.8; }
+.quote-banner .quote-attr { font-family: 'Jost', sans-serif; font-weight: 200; font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: #a89278; margin-top: 1rem; display: block; }
+.letter-card { border: 0.5px solid rgba(156,125,90,0.3); padding: 3.5rem; position: relative; background: rgba(255,248,238,0.75); opacity: 0; transform: translateY(30px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.letter-card.visible { opacity: 1; transform: translateY(0); }
+.letter-card::before { content: '\201C'; position: absolute; top: 1.2rem; left: 2rem; font-family: 'Cormorant Garamond', serif; font-size: 5rem; color: rgba(156,125,90,0.15); line-height: 1; }
+.letter-opening { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; font-style: normal; color: #2c2420; margin-bottom: 1.4rem; letter-spacing: 0.02em; }
+.letter-opening .shruti-name { color: #9c7d5a; font-style: italic; }
+.letter-text { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 300; line-height: 2.15; color: #3a2e28; font-style: italic; }
+.letter-sign { margin-top: 2.5rem; text-align: right; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-style: italic; color: #9c7d5a; }
+.reasons-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; }
+.reason-card { border: 0.5px solid rgba(156,125,90,0.2); padding: 1.8rem 1.5rem; background: rgba(255,248,238,0.6); text-align: center; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease; }
+.reason-card:hover { background: rgba(255,248,238,0.95); }
+.reason-card.visible { opacity: 1; transform: translateY(0); }
+.reason-icon { font-size: 1.6rem; margin-bottom: 0.8rem; display: block; animation: iconFloat 3s ease-in-out infinite; }
+@keyframes iconFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+.reason-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 400; color: #2c2420; margin-bottom: 0.4rem; }
+.reason-text { font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 300; color: #8a7060; line-height: 1.8; }
+.ornament { text-align: center; color: #c2aa8c; font-size: 1.1rem; letter-spacing: 0.6em; opacity: 0.45; padding: 1rem 0; }
+.timeline-wrap { max-width: 680px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+.timeline { position: relative; padding-left: 2.2rem; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 0.5px; background: linear-gradient(to bottom, transparent, rgba(156,125,90,0.5) 10%, rgba(156,125,90,0.5) 90%, transparent); }
+.timeline-item { position: relative; margin-bottom: 4rem; opacity: 0; transform: translateX(-24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.timeline-item.visible { opacity: 1; transform: translateX(0); }
+.timeline-dot { position: absolute; left: -2.52rem; top: 0.35rem; width: 10px; height: 10px; border-radius: 50%; background: #b89a72; border: 2px solid #f5f0e8; box-shadow: 0 0 0 0 rgba(184,154,114,0.5); animation: dotPing 2.5s ease-out infinite; }
+@keyframes dotPing { 0% { box-shadow: 0 0 0 0 rgba(184,154,114,0.5); } 70% { box-shadow: 0 0 0 8px rgba(184,154,114,0); } 100% { box-shadow: 0 0 0 0 rgba(184,154,114,0); } }
+
+/* special hug dot — slightly warmer */
+.timeline-dot.hug { background: #c4917a; box-shadow: 0 0 0 0 rgba(196,145,122,0.5); }
+@keyframes dotPingHug { 0% { box-shadow: 0 0 0 0 rgba(196,145,122,0.5); } 70% { box-shadow: 0 0 0 10px rgba(196,145,122,0); } 100% { box-shadow: 0 0 0 0 rgba(196,145,122,0); } }
+.timeline-dot.hug { animation: dotPingHug 2.5s ease-out infinite; }
+
+.timeline-date { font-family: 'Jost', sans-serif; font-weight: 200; font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: #9c7d5a; margin-bottom: 0.6rem; }
+.timeline-title { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 400; color: #2c2420; margin-bottom: 0.5rem; line-height: 1.2; }
+.timeline-desc { font-family: 'Jost', sans-serif; font-weight: 300; font-size: 0.88rem; color: #8a7060; line-height: 1.9; }
+.timeline-tag { display: inline-block; font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; color: #9c7d5a; border: 0.5px solid rgba(156,125,90,0.35); padding: 3px 10px; margin-bottom: 0.6rem; }
+
+.choose-section { max-width: 680px; margin: 0 auto; padding: 3rem 2rem; text-align: center; }
+.choose-card { border: 0.5px solid rgba(156,125,90,0.3); padding: 3.5rem 2.5rem; background: rgba(255,248,238,0.75); position: relative; overflow: hidden; opacity: 0; transform: translateY(30px); transition: opacity 1s ease, transform 1s ease; }
+.choose-card.visible { opacity: 1; transform: translateY(0); }
+.choose-card::after { content: '♥'; position: absolute; font-size: 10rem; color: rgba(156,125,90,0.05); bottom: -2rem; right: -1rem; line-height: 1; pointer-events: none; animation: bgHeartPulse 4s ease-in-out infinite; }
+@keyframes bgHeartPulse { 0%,100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.08); opacity: 1; } }
+.choose-line { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.3rem, 3.5vw, 1.8rem); font-style: italic; font-weight: 300; color: #4a3428; line-height: 2; display: block; opacity: 0; transform: translateY(12px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.choose-line.visible { opacity: 1; transform: translateY(0); }
+.choose-line.highlight { color: #9c7d5a; font-weight: 400; font-size: clamp(1.5rem, 4vw, 2.1rem); }
+.choose-heart { font-size: 1.8rem; display: block; margin-top: 1.2rem; animation: pulse 2s ease-in-out infinite; opacity: 0; transition: opacity 0.7s ease 1.2s; }
+.choose-heart.visible { opacity: 1; }
+.vow-section { max-width: 680px; margin: 0 auto; padding: 2rem 2rem 5rem; text-align: center; }
+.vow-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 3.2vw, 1.6rem); font-style: italic; font-weight: 300; color: #5a4030; line-height: 1.9; opacity: 0; transform: translateY(20px); transition: opacity 0.9s ease, transform 0.9s ease; }
+.vow-text.visible { opacity: 1; transform: translateY(0); }
+footer { text-align: center; padding: 4rem 2rem 5rem; border-top: 0.5px solid rgba(156,125,90,0.2); background: rgba(235,225,210,0.4); }
+.footer-names { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; font-style: italic; color: #6b5040; }
+.footer-date { font-family: 'Jost', sans-serif; font-weight: 200; font-size: 11px; letter-spacing: 0.4em; text-transform: uppercase; color: #a89278; margin-top: 1rem; }
+.final-heart { margin-top: 2rem; color: #b89a72; font-size: 26px; animation: pulse 2s ease-in-out infinite; display: block; }
+</style>
+</head>
+<body>
+
+<div class="petals-container" id="petals"><div class="petal" style="left: 91.0856%; --sz: 14.521089021672207px; --d: 13.956525443935291s; --delay: 6.967188447070568s; --drift: 14.291648042295924px;">🌸</div><div class="petal" style="left: 7.4814%; --sz: 13.580112660866547px; --d: 16.613402616173147s; --delay: 4.838319323910548s; --drift: -6.411648323161869px;">🌸</div><div class="petal" style="left: 17.106%; --sz: 14.540075020449219px; --d: 9.12945639673953s; --delay: 8.850510659357159s; --drift: -47.62043750520226px;">🌸</div><div class="petal" style="left: 55.2789%; --sz: 13.293180731687631px; --d: 13.998140641413203s; --delay: 7.940001683355723s; --drift: -54.57613625223729px;">🌺</div><div class="petal" style="left: 49.2714%; --sz: 11.748566920991381px; --d: 12.522283292400928s; --delay: 13.486451903283529s; --drift: -18.909975310682018px;">🌸</div><div class="petal" style="left: 66.5982%; --sz: 23.465604986021926px; --d: 17.53330595364067s; --delay: 0.3250766343226419s; --drift: -9.518912455427433px;">🌸</div><div class="petal" style="left: 88.836%; --sz: 14.995358410679945px; --d: 12.550093395532404s; --delay: 11.403650618973769s; --drift: -22.027734490783853px;">✿</div><div class="petal" style="left: 17.5977%; --sz: 10.801084506318428px; --d: 17.30631167094822s; --delay: 4.452895982634597s; --drift: 53.037662711362586px;">✿</div><div class="petal" style="left: 98.8429%; --sz: 10.39021940521037px; --d: 15.87810474468671s; --delay: 3.3058538326709437s; --drift: 28.10350979526847px;">🌺</div><div class="petal" style="left: 31.7459%; --sz: 11.953286890949197px; --d: 16.873759726277683s; --delay: 7.196155421038031s; --drift: 6.611443127834824px;">🌺</div><div class="petal" style="left: 62.3714%; --sz: 13.728883132420279px; --d: 17.013300972753434s; --delay: 0.5474455791903893s; --drift: 15.422545192209185px;">❀</div><div class="petal" style="left: 13.6155%; --sz: 14.191262283921002px; --d: 17.440856165035022s; --delay: 3.310805347723556s; --drift: 57.850253895292624px;">🌼</div><div class="petal" style="left: 84.887%; --sz: 18.82955984265716px; --d: 13.707267792651603s; --delay: 6.264452775341281s; --drift: -1.5084988230485408px;">✿</div><div class="petal" style="left: 54.6035%; --sz: 16.343027560387927px; --d: 11.186889768658066s; --delay: 11.007523152032691s; --drift: 0.09183561588403055px;">🌺</div><div class="petal" style="left: 39.5916%; --sz: 16.810151882609283px; --d: 15.226341204339858s; --delay: 4.451292258476627s; --drift: -47.125599762693604px;">❀</div><div class="petal" style="left: 50.0381%; --sz: 21.622553988850505px; --d: 16.018377378166065s; --delay: 6.396409819460777s; --drift: -38.82847365357344px;">🌼</div><div class="petal" style="left: 28.538%; --sz: 15.461044051549774px; --d: 14.517064923954715s; --delay: 3.8885450389529286s; --drift: -46.20713014225844px;">🌸</div><div class="petal" style="left: 13.1949%; --sz: 14.720188118507828px; --d: 14.360495603080967s; --delay: 12.083753060542254s; --drift: -57.50043013154786px;">🌺</div><div class="petal" style="left: 12.0225%; --sz: 10.574444437698837px; --d: 14.834372595110736s; --delay: 0.049228157403329864s; --drift: -20.077012477124846px;">🌺</div><div class="petal" style="left: 14.2651%; --sz: 10.650663459612593px; --d: 11.669639124122284s; --delay: 6.351937858704379s; --drift: 6.565786839459591px;">🌼</div><div class="petal" style="left: 61.002%; --sz: 19.419079424151175px; --d: 11.047449896220208s; --delay: 0.5609061767479773s; --drift: -19.73046051958537px;">🌸</div><div class="petal" style="left: 23.052%; --sz: 16.14544976461294px; --d: 17.940083282509015s; --delay: 12.186365864421303s; --drift: 50.78077824444349px;">🌼</div><div class="petal" style="left: 34.7171%; --sz: 17.602644613458484px; --d: 10.485001005829737s; --delay: 11.597679434548517s; --drift: 0.8782455508438947px;">🌼</div><div class="petal" style="left: 6.26433%; --sz: 14.140370156115637px; --d: 10.367541822313786s; --delay: 12.108586992445264s; --drift: 20.109273935547783px;">🌼</div><div class="petal" style="left: 39.2407%; --sz: 16.562877395398274px; --d: 17.06441701342309s; --delay: 6.327520636475869s; --drift: -50.14531401423111px;">🌺</div></div>
+<div class="hearts-container" id="hearts"><div class="fheart" style="left: 78.3944%; --sz: 14.278456654245606px; --d: 20.042891514831304s; --delay: 7.0452249612717655s;">♥</div><div class="fheart" style="left: 37.2326%; --sz: 15.494901398911239px; --d: 18.609194498659697s; --delay: 11.422945372720836s;">♥</div><div class="fheart" style="left: 87.6012%; --sz: 16.35741836735771px; --d: 12.642099290151616s; --delay: 9.785348194934548s;">♥</div><div class="fheart" style="left: 77.6213%; --sz: 8.998916771643355px; --d: 17.874233531522343s; --delay: 15.589288881036591s;">♥</div><div class="fheart" style="left: 67.9257%; --sz: 15.648918556023709px; --d: 14.731045221883473s; --delay: 5.570385280031147s;">♥</div><div class="fheart" style="left: 91.3232%; --sz: 12.201957811597788px; --d: 17.848524259285387s; --delay: 1.9599917837695386s;">♥</div><div class="fheart" style="left: 30.3524%; --sz: 13.486563636783798px; --d: 21.65177388960329s; --delay: 4.070265474537887s;">♥</div><div class="fheart" style="left: 81.0005%; --sz: 12.299161622523583px; --d: 15.766123351990773s; --delay: 6.451900725164656s;">♥</div><div class="fheart" style="left: 81.3668%; --sz: 10.792425811900253px; --d: 18.99022124896694s; --delay: 15.256414772692416s;">♥</div><div class="fheart" style="left: 50.8175%; --sz: 17.220417454236262px; --d: 19.7362907253697s; --delay: 0.4979577062195373s;">♥</div><div class="fheart" style="left: 36.8325%; --sz: 9.070954776968929px; --d: 12.917629164927432s; --delay: 12.792505923709053s;">♥</div><div class="fheart" style="left: 28.169%; --sz: 17.71849281627905px; --d: 13.635738773915007s; --delay: 17.020072904734466s;">♥</div></div>
+
+<main>
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <p class="anniversary-label">Two years of forever</p>
+    <h1 class="names">Dirgh <span class="amp">&amp;</span> Shruti</h1>
+    <p class="tagline">a love story still being written</p>
+    <p class="date-line">11 May 2024 &nbsp;—&nbsp; 11 May 2026</p>
+    <div class="heart-divider"><span class="heart-icon">♥</span></div>
+    <p class="counter" id="counter">729 days &nbsp;·&nbsp; 12 hours &nbsp;·&nbsp; 5 minutes &nbsp;·&nbsp; 27 seconds<br><span style="font-size:0.82rem;color:#a89278;font-style:normal;letter-spacing:0.08em;">and every single one has been a gift</span></p>
+    <div class="stats-row" id="stats-row">
+      <div class="stat-pill"><span class="stat-num">23</span><span class="stat-lbl">Months</span></div>
+      <div class="stat-pill"><span class="stat-num">104</span><span class="stat-lbl">Weeks</span></div>
+      <div class="stat-pill"><span class="stat-num">729</span><span class="stat-lbl">Days</span></div>
+      <div class="stat-pill"><span class="stat-num">17,508</span><span class="stat-lbl">Hours</span></div></div>
+    <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <div style="padding: 0 2rem;">
+    <div class="quote-banner visible" id="qb">
+      <p>"In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."</p>
+      <span class="quote-attr">— Maya Angelou</span>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top: 2rem;">
+    <p class="section-label">A letter for you</p>
+    <div class="letter-card visible" id="letter">
+      <p class="letter-opening">My dearest <span class="shruti-name">Shruti,</span></p>
+      <p class="letter-text">
+        Two years ago, on a day I never want to forget, you walked into my life and quietly made it whole. I didn't know then that a single moment could hold the weight of everything — but with you, every ordinary day became something I wanted to remember forever.<br><br>
+        I think about how effortlessly you became the best part of my world. The way you laugh — fully, without holding back. The way you listen, really listen, like what I'm saying matters more than anything else. The way you make even the most mundane Tuesday feel like somewhere worth being.<br><br>
+        Every laugh we've shared, every quiet evening, every little glance across a crowded room — each one lives in me like a favourite song I never grow tired of. You are the reason time feels both too fast and beautifully full.<br><br>
+        I love the way you make even the simplest moments feel like magic. I love that I get to be the one standing beside you, through every season, every chapter. And I love that our story — this beautiful, honest, tender thing we've built — is still being written, with so many pages still to come.<br><br>
+        Two years, and I would choose you again in every single one.
+      </p>
+      <p class="letter-sign">Forever yours, Dirgh 🌹</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 1rem;">
+    <p class="section-label">A few reasons I love you</p>
+    <div class="reasons-grid">
+      <div class="reason-card visible" id="rc0" data-delay="0"><span class="reason-icon">🌸</span><p class="reason-title">Your laugh</p><p class="reason-text">It fills every room and every quiet corner of my heart.</p></div>
+      <div class="reason-card visible" id="rc1" data-delay="120"><span class="reason-icon">🌿</span><p class="reason-title">Your kindness</p><p class="reason-text">The way you care — gently, genuinely, without being asked.</p></div>
+      <div class="reason-card visible" id="rc2" data-delay="240"><span class="reason-icon">✨</span><p class="reason-title">Your spark</p><p class="reason-text">You make ordinary moments feel like something worth remembering.</p></div>
+      <div class="reason-card visible" id="rc3" data-delay="360"><span class="reason-icon">🤍</span><p class="reason-title">Just you</p><p class="reason-text">Every little thing that makes you exactly who you are.</p></div>
+    </div>
+  </section>
+
+  <div class="ornament">· · ♥ · ·</div>
+
+  <div class="timeline-wrap">
+    <p class="section-label" style="margin-bottom: 3.5rem;">Our story so far</p>
+    <div class="timeline">
+
+      <div class="timeline-item visible" data-delay="0">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">11 May 2024</p>
+        <h3 class="timeline-title">Where it all began</h3>
+        <p class="timeline-desc">The day two hearts found each other and decided, quietly and certainly, to never let go. One date on a calendar that changed everything.</p>
+      </div>
+
+      <div class="timeline-item visible" data-delay="150">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">13 May 2024</p>
+        <span class="timeline-tag">at school</span>
+        <h3 class="timeline-title">Our first hug 🤗</h3>
+        <p class="timeline-desc">Just two days in, and already the world felt a little safer in your arms. A hallway, a moment, a warmth that said everything words couldn't. Some hugs you never really let go of.</p>
+      </div>
+
+      <div class="timeline-item visible" data-delay="300">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">15 May 2025 · 6:28 pm</p>
+        <h3 class="timeline-title">Our first kiss</h3>
+        <p class="timeline-desc">A moment frozen in time — 6:28 in the evening, when the world paused just for the two of us. Some timestamps are worth keeping forever. This is one of them.</p>
+      </div>
+
+      <div class="timeline-item visible" data-delay="450">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">6 February 2026</p>
+        <h3 class="timeline-title">Our first date</h3>
+        <p class="timeline-desc">Two people, one afternoon, and the slow, wonderful realization that this was exactly where we were supposed to be. Every moment felt like the beginning of something beautiful.</p>
+      </div>
+
+      <div class="timeline-item visible" data-delay="600">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">Every single day</p>
+        <h3 class="timeline-title">Every moment with you</h3>
+        <p class="timeline-desc">Every conversation, every shared silence, every small and quiet joy — all of it a favourite memory. Because every moment spent with you is a gift.</p>
+      </div>
+
+      <div class="timeline-item visible" data-delay="750">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">11 May 2026</p>
+        <h3 class="timeline-title">Two beautiful years ♥</h3>
+        <p class="timeline-desc">Seven hundred and thirty days of choosing each other, and still counting. Happy anniversary, Shruti — here's to forever and a little beyond.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="choose-section">
+    <div class="choose-card visible" id="chooseCard">
+      <span class="choose-line visible" id="cl0">And if I had to choose again,</span>
+      <span class="choose-line highlight visible" id="cl1">I would still choose you.</span>
+      <span class="choose-line visible" id="cl2">Every single time.</span>
+      <span class="choose-heart visible" id="clh">💖</span>
+    </div>
+  </div>
+
+  <div class="vow-section">
+    <p class="vow-text visible" id="vow">"I didn't fall in love with you.<br>I walked into love with you,<br>with my eyes wide open,<br>choosing to take every step along the way."</p>
+  </div>
+
+  <footer>
+    <p class="footer-names">Dirgh &amp; Shruti</p>
+    <p class="footer-date">11 · 05 · 2024 — Always</p>
+    <span class="final-heart">♥</span>
+  </footer>
+</main>
+
+<script>
+  const petalsEl = document.getElementById('petals');
+  const petalSymbols = ['🌸','✿','❀','🌼','🌺'];
+  for (let i = 0; i < 25; i++) {
+    const p = document.createElement('div');
+    p.className = 'petal';
+    const drift = (Math.random() - 0.5) * 120;
+    p.textContent = petalSymbols[Math.floor(Math.random() * petalSymbols.length)];
+    p.style.cssText = `left:${Math.random()*100}%;--sz:${10+Math.random()*14}px;--d:${8+Math.random()*10}s;--delay:${Math.random()*15}s;--drift:${drift}px;`;
+    petalsEl.appendChild(p);
+  }
+
+  const heartsEl = document.getElementById('hearts');
+  for (let i = 0; i < 12; i++) {
+    const h = document.createElement('div');
+    h.className = 'fheart';
+    h.textContent = '♥';
+    h.style.cssText = `left:${Math.random()*100}%;--sz:${8+Math.random()*10}px;--d:${10+Math.random()*12}s;--delay:${Math.random()*18}s;`;
+    heartsEl.appendChild(h);
+  }
+
+  function updateCounter() {
+    const start = new Date('2024-05-11T00:00:00');
+    const now = new Date();
+    const diff = now - start;
+    const days = Math.floor(diff / (1000*60*60*24));
+    const hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    const mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+    const secs = Math.floor((diff % (1000*60)) / 1000);
+    const months = Math.floor(days / 30.44);
+    const weeks = Math.floor(days / 7);
+    const hours_total = Math.floor(diff / (1000*60*60));
+    document.getElementById('counter').innerHTML =
+      `${days} days &nbsp;·&nbsp; ${hours} hours &nbsp;·&nbsp; ${mins} minutes &nbsp;·&nbsp; ${secs} seconds<br><span style="font-size:0.82rem;color:#a89278;font-style:normal;letter-spacing:0.08em;">and every single one has been a gift</span>`;
+    document.getElementById('stats-row').innerHTML = `
+      <div class="stat-pill"><span class="stat-num">${months}</span><span class="stat-lbl">Months</span></div>
+      <div class="stat-pill"><span class="stat-num">${weeks}</span><span class="stat-lbl">Weeks</span></div>
+      <div class="stat-pill"><span class="stat-num">${days}</span><span class="stat-lbl">Days</span></div>
+      <div class="stat-pill"><span class="stat-num">${hours_total.toLocaleString()}</span><span class="stat-lbl">Hours</span></div>`;
+  }
+  updateCounter();
+  setInterval(updateCounter, 1000);
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target;
+        const delay = parseInt(el.dataset.delay || 0);
+        setTimeout(() => el.classList.add('visible'), delay);
+        obs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.timeline-item').forEach((el, i) => { el.dataset.delay = i * 150; obs.observe(el); });
+  document.querySelectorAll('.reason-card').forEach((el, i) => { el.dataset.delay = i * 120; obs.observe(el); });
+  ['qb','letter','vow'].forEach(id => { const el = document.getElementById(id); if(el) obs.observe(el); });
+
+  const chooseCard = document.getElementById('chooseCard');
+  const chooseObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        chooseCard.classList.add('visible');
+        setTimeout(() => document.getElementById('cl0').classList.add('visible'), 200);
+        setTimeout(() => document.getElementById('cl1').classList.add('visible'), 700);
+        setTimeout(() => document.getElementById('cl2').classList.add('visible'), 1200);
+        setTimeout(() => document.getElementById('clh').classList.add('visible'), 1700);
+        chooseObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  chooseObs.observe(chooseCard);
+</script>
+
+
+</body></html>
